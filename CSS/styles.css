@@ -471,3 +471,30 @@ footer p {
 .d-none {
     display: none;
 }
+
+
+@media screen and (max-width: 800px){
+    .right {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+        margin-right: 40px;
+        text-align: right;
+        margin-left: 40px;
+    };
+
+    .left {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+        margin-left: 40px;
+        margin-right: 40px;
+    };
+
+    .right-gradient::after {
+        background: linear-gradient(to left, rgb(var(--color-grey)), rgba(var(--color-grey), 0.3) 15%, white);
+    };
+
+    .left-gradient::after {
+        background: linear-gradient(to right, rgb(var(--color-grey)), rgba(var(--color-grey), 0.3) 15%, white);
+    }
+    
+}
