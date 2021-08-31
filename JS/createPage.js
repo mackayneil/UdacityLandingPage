@@ -13,6 +13,7 @@ const setName = () => {
 
 const setNavItems = () => {
     const navItems = document.querySelector('#nav-items');
+
     navItems.children[0].firstElementChild.setAttribute('data-text', userData.place1);
     navItems.children[1].firstElementChild.setAttribute('data-text', userData.place2);
     navItems.children[2].firstElementChild.setAttribute('data-text', userData.place3);

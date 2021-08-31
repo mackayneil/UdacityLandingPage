@@ -1,6 +1,6 @@
 const mobileMenuBtn = document.querySelector('#mobile-menu'),
       navItems = document.querySelector('#nav-items'),
-      navLinks = navItems.children;;
+      navLinks = navItems.children;
 
 
 const toggleMenu = () => {
