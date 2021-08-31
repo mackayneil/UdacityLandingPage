@@ -18,14 +18,3 @@ btnComplete.addEventListener('click', function(e) {
 });
 
 
-const navItems = document.querySelector('#nav-items'),
-    navLinks = navItems.children;
-
-for (const i of navLinks) {
-    i.addEventListener('click', function() {
-        if (window.innerWidth < 800) {
-            navItems.classList.add('d-none');
-        }
-    })
-}
-
