@@ -166,7 +166,7 @@ for (let key in destinations) {
 // Fills in the drop downs based off of the destinations object content
 for (let i of placeInputs) {
     for (const j of destinationNames) {
-        let text = `<option value="${j}">${j}</option>`
+        let text = `<option selected value="${j}">${j}</option>`
     i.insertAdjacentHTML('afterbegin',text);
     }
  }

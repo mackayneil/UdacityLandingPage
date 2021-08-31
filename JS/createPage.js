@@ -15,9 +15,18 @@ const addNavLinks = () => {
     };
 };
 
-
-
-
+const highLightFocus = () => {
+    window.addEventListener('scroll', function() {        
+        const placeContainer = document.querySelectorAll('.place-container');  
+        for (const i of placeContainer) {           
+            if (i.getBoundingClientRect().top <= 450 && i.getBoundingClientRect().top >= -350) {
+               i.classList.remove('opacity')
+            } else {
+                i.classList.add('opacity')
+            }
+        }
+    })
+}
 
 // Fills user data into the page
 const setName = () => {
@@ -72,7 +81,7 @@ const addPlaces = () => {
     for (const i of userSelectedPlaces.reverse()) {
         let place = i.replace(/\s/g, "").toLowerCase();
         if(userSelectedPlaces.indexOf(i) % 2 === 0) {
-            text = `<section class="place-container" id="${i}">
+            text = `<section class="place-container opacity" id="${i}">
                         <div class="left">
                             <h2 class="place-name">${destinations[place].name}</h2>
                             <p class="place-description">${destinations[place].info}</p>
@@ -96,7 +105,7 @@ const addPlaces = () => {
                         </figure>   
                     </section>`
                     } else {
-                    text = `<section class="place-container" id="${i}">
+                    text = `<section class="place-container opacity" id="${i}">
                         <div class="right">
                             <h2 class="place-name">${destinations[place].name}</h2>
                             <p class="place-description">${destinations[place].info}</p>
@@ -125,4 +134,4 @@ const addPlaces = () => {
 }                   
 
 
-export { addUserData, addPlaces, addNavLinks }
+export { addUserData, addPlaces, addNavLinks, highLightFocus }
