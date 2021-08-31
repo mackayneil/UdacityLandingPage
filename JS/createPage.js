@@ -12,9 +12,9 @@ const addNavLinks = () => {
         navLink = document.createElement('a');
         navItems.append(navItem);
         navItem.appendChild(navLink)  
-    }
-}
-addNavLinks()
+    };
+};
+
 
 
 
@@ -125,4 +125,4 @@ const addPlaces = () => {
 }                   
 
 
-export { addUserData, addPlaces }
+export { addUserData, addPlaces, addNavLinks }
