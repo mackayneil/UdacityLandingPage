@@ -1,12 +1,12 @@
 import { backToTop } from './backToTop.js';
 import { checkClicked, saveUserInput, btnComplete } from './modal.js';
-import { addUserData, addPlaces, addNavLinks } from './createPage.js';
+import { addUserData, addPlaces, addNavLinks, highLightFocus } from './createPage.js';
 import { menuClickEvent } from './topMenu.js';
 
 
 backToTop();
 menuClickEvent();
-
+highLightFocus();
 
 // Functionality for complete buttons
 btnComplete.addEventListener('click', function(e) {
